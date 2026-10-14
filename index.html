@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maila Srilakshmi's AWS Cloud and DevOps portfolio">
+  <title>Maila Srilakshmi | AWS Cloud & DevOps</title>
+
+  <style>
+    :root {
+      --bg: #08111f;
+      --panel: #101e32;
+      --border: #263b55;
+      --text: #f1f5f9;
+      --muted: #bdcbdc;
+      --accent: #67e8f9;
+      --blue: #1685c5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: #0d192b;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+    }
+
+    .logo {
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 100px 0 85px;
+      background:
+        radial-gradient(ellipse at 85% 15%, #123b60 0%, transparent 45%),
+        linear-gradient(140deg, #08111f, #0d1c32);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: clamp(26px, 4vw, 34px);
+      margin-bottom: 22px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-top: 10px;
+      border-radius: 3px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 720px;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--blue);
+      color: white;
+      padding: 11px 19px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 1px solid var(--blue);
+    }
+
+    .button.secondary {
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .alternate {
+      background: #0b1728;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card p {
+      font-size: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #122943;
+      border: 1px solid #2a506d;
+      color: #a5f3fc;
+      padding: 7px 13px;
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #9fb1c7;
+      margin-top: 20px;
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      background: #0d192b;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="logo" href="#home">Maila Srilakshmi</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">AWS CLOUD | DEVOPS | AUTOMATION</p>
+
+        <h1>Hello, I'm<br><span>Maila Srilakshmi</span></h1>
+
+        <h3>Aspiring AWS Cloud & DevOps Engineer</h3>
+
+        <p class="intro">
+          A Computer Science Engineering graduate building practical
+          skills in cloud infrastructure, automation, containerization
+          and continuous integration and delivery.
+        </p>
+
+        <div class="buttons">
+          <a class="button" href="#projects">Explore My Projects</a>
+          <a class="button secondary"
+             href="https://github.com/sriilakshmi-maila"
+             target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+
+        <p>
+          I am a Computer Science Engineering graduate aspiring to
+          start my career in AWS Cloud, DevOps and Cloud Infrastructure
+          Engineering.
+        </p>
+
+        <p>
+          Through hands-on practice and projects, I have explored AWS
+          services, infrastructure provisioning with Terraform,
+          Linux administration, containerization and CI/CD pipelines.
+        </p>
+
+        <p>
+          I enjoy learning new technologies, troubleshooting issues
+          and understanding how applications are deployed and managed
+          in cloud environments.
+        </p>
+
+        <p>
+          I am looking for entry-level opportunities where I can
+          contribute, learn from experienced engineers and grow my
+          technical skills.
+        </p>
+      </div>
+    </section>
+
+    <section class="alternate" id="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+
+        <div class="tag-list">
+          <span class="tag">Amazon Web Services</span>
+          <span class="tag">EC2</span>
+          <span class="tag">VPC</span>
+          <span class="tag">S3</span>
+          <span class="tag">IAM</span>
+          <span class="tag">Load Balancing</span>
+          <span class="tag">Auto Scaling</span>
+          <span class="tag">CloudWatch</span>
+          <span class="tag">ECR</span>
+          <span class="tag">ECS</span>
+          <span class="tag">EKS</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Bash</span>
+          <span class="tag">Git</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+        </div>
+
+        <p class="note">
+          Skills listed here should reflect technologies you have
+          actually practiced and can discuss in an interview.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>AWS Three-Tier Infrastructure</h3>
+
+            <p>
+              Practiced provisioning cloud infrastructure with
+              Terraform, including VPC networking, public and private
+              subnets, EC2, load balancing, Auto Scaling and RDS.
+            </p>
+
+            <p><strong>Technologies:</strong> AWS, Terraform</p>
+
+            <a href="https://github.com/sriilakshmi-maila"
+               target="_blank" rel="noopener noreferrer">
+              View GitHub profile →
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Train Ticket Reservation CI/CD</h3>
+
+            <p>
+              Worked on a CI/CD workflow for a Java application using
+              GitHub Actions, Maven, container images, Amazon ECR
+              and Amazon ECS.
+            </p>
+
+            <p>
+              <strong>Technologies:</strong> Java, Maven,
+              GitHub Actions, Docker, AWS
+            </p>
+
+            <a href="https://github.com/sriilakshmi-maila"
+               target="_blank" rel="noopener noreferrer">
+              View GitHub profile →
+            </a>
+          </article>
+        </div>
+
+        <p class="note">
+          Replace the GitHub profile links above with the exact
+          repositories for each project when available.
+        </p>
+      </div>
+    </section>
+
+    <section class="alternate" id="education">
+      <div class="container">
+        <h2>Education</h2>
+
+        <div class="card">
+          <h3>B.Tech — Computer Science and Engineering</h3>
+          <p>Sree Vahini Institute of Science & Technology</p>
+          <p>2022–2026 | CGPA: 7.5/10</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Let's Connect</h2>
+
+        <p>
+          I am interested in entry-level AWS Cloud, DevOps and
+          Cloud Infrastructure Engineering opportunities.
+        </p>
+
+        <div class="buttons">
+          <a class="button"
+             href="https://github.com/sriilakshmi-maila"
+             target="_blank" rel="noopener noreferrer">GitHub</a>
+
+          <a class="button secondary"
+             href="https://www.linkedin.com/in/maila-srilakshmi"
+             target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+
+        <p class="note">
+          Please contact me through LinkedIn for professional enquiries.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Maila Srilakshmi | AWS Cloud & DevOps Portfolio</p>
+    </div>
+  </footer>
+
+</body>
+</html>
